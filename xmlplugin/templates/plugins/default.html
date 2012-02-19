@@ -1,0 +1,20 @@
+{% load sekizai_tags %}
+
+{% addtoblock "css" %}
+<link href="/static/css/smoothness/jquery-ui-1.8.13.custom.css" media="screen" rel="stylesheet" type="text/css" />
+{% endaddtoblock %}
+
+<div id="{{object.name}}_all">
+<div id="{{object.name}}_all_content">
+
+{% for data in datas %}
+    <div class='{{object.name}}' id='fiche_{{object.name}}_{{ forloop.counter }}' style='background-color:#990;'>
+	{% for field, value  in data.items %}
+		<p>{{ field }} : {{ value }}</p>
+	{% endfor%}
+	<hr/>
+    </div>
+{% endfor %}
+</div>
+</div>
+

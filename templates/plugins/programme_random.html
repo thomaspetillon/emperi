@@ -1,0 +1,17 @@
+{% load sekizai_tags %}
+{% load xmlplugin_tags %}
+<div id="programme_court">
+    <div id="programme_court_content">
+    {% with datas|random as concert %}
+        <div class='concert' >
+            <p class="concert_date">{{ concert.date|datestr_format:"%Y-%m-%d||%A %d %B"|capfirst }}</p>
+            {% with concert.works|random as work %}
+                <h4>{{work.title}}</h4>
+                <p class="works_info">{{work.composer_first_name}} {{work.composer_last_name}} </p>
+            {% endwith %}
+            <hr/>
+        </div>
+    {% endwith %}
+    </div>
+</div>
+

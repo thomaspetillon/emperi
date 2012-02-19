@@ -1,0 +1,34 @@
+{% load sekizai_tags %}
+{% load xmlplugin_tags %}
+<!--{% addtoblock "css" %}
+<link href="/static/css/smoothness/jquery-ui-1.8.13.custom.css" media="screen" rel="stylesheet" type="text/css" />
+{% endaddtoblock %}-->
+
+<div id="programme_detail">
+<div id="programme_detail_content">
+{% with datas as programmes %}
+{% for concert in programmes %}
+    <div class='concert' id='concert_{{ forloop.counter }}'>
+        <div class="concert_info">
+            <p class="concert_date">{{ concert.date|datestr_format:"%Y-%m-%d||%A %d %B"|capfirst }} <span>à {{concert.time|timestr_format:"%H:%M:%S||%H h %M"}}</span></p>
+            <ul class="concert_artists">
+            {% for artist in concert.artists %}
+            <li>{{artist.first_name}} {{artist.last_name}} <span>{{artist.instrument}}</span></li>
+            {%endfor%}
+        </ul>
+        </div>
+        <div class="concert_works">
+        {% for work in concert.works %}
+            <h3>{{work.title}}</h3>
+            <p >de {{work.composer_first_name}} {{work.composer_last_name}} </p>
+        {% endfor %}
+        </div>
+       
+        <hr/>
+    </div>
+{% endfor %}
+{% endwith %}
+
+</div>
+</div>
+

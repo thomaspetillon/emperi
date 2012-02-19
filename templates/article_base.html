@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load cache menu_tags %}
+{% block content %}
+	{% block article %}
+				<article class="grid_9 article_texte ">
+					{% placeholder "main" %}
+				</article>
+	{% endblock %}
+{% endblock %}

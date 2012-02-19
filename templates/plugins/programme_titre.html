@@ -1,0 +1,20 @@
+{% load sekizai_tags %}
+{% load xmlplugin_tags %}
+<div id="programme_court">
+<div id="programme_court_content">
+{% with datas as programmes %}
+{% for concert in programmes|slice:":1" %}
+    <div class='concert' >
+        <p class="concert_date">{{ concert.date|datestr_format:"%Y-%m-%d||%A %d %B"|capfirst }}</p>
+        {% for work in concert.works %}
+            <h4>{{work.title}}</h4>
+            <p class="works_info">{{work.composer_first_name}} {{work.composer_last_name}} </p>
+        {% endfor %}
+        <hr/>
+    </div>
+{% endfor %}
+{% endwith %}
+
+</div>
+</div>
+

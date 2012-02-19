@@ -1,0 +1,47 @@
+{% load sekizai_tags %}
+{% load xmlplugin_tags %}
+{% addtoblock "css" %}
+<link href="/static/css/smoothness/jquery-ui-1.8.13.custom.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+{% endaddtoblock %}
+
+<div id="artistes_all">
+<div id="artistes_all_content">
+{% with datas as artistes %}
+{% for artiste in artistes %}
+    <div class='artiste  ' id='fiche_artiste_{{ forloop.counter }}'>
+    {% if artiste.biography %}
+        <a class='lien_bio' onclick='afficheBio("{{ forloop.counter }}");' >Biographie</a>
+    {% endif %}
+
+    <h3>{{ artiste.lastname }}<span class='prenom'> {{ artiste.firstname }} </span><span class='instrument'> {{ artiste.instrument.name }}</span></h3>
+
+    {% if artiste.photo_link_small %}
+        <img src='{{artiste.photo_link_small}}'/>
+    {% endif %}
+
+    {% if artiste.biography %}
+        <div  class='bio' style='display:none;'  id='bio_{{ forloop.counter }}'>
+    	<h3>{{ artiste.lastname }}<span class='prenom'> {{ artiste.firstname }} </span><span class='instrument'> {{ artiste.instrument.name }}</span></h3>
+	{% if artiste.photo_link_small %}
+        	<img src='{{artiste.photo_link_small}}'/>
+	{% endif %}
+	<p>{{ artiste.biography|striphtmlcomments|safe }}</p>
+
+	</div>
+    {% endif %}
+
+    </div>
+{% endfor %}
+{% endwith %}
+<script type="text/javascript">
+function afficheBio(i){
+    cible ="#bio_"+i;
+    $(cible).dialog({ title: 'Biographie' , width: 600, zIndex: 20000 ,height : 600 ,modal: true , dialogClass: 'biography'});
+};
+</script>
+
+</div>
+</div>
+

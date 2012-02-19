@@ -1,0 +1,614 @@
+@import "grid.css";
+@import "../fonts/linbiolinum.css";
+@import "../fonts/linlbertine.css";
+body{
+    text-align:center;
+    font-size:14px;
+    line-height:16px;
+    font-family: 'LinuxLibertineORegular', serif;
+}
+header, footer, section, article, aside,nav{
+    display:block;
+    text-align:left;
+}
+body, ul{
+    margin:0px;
+    padding:0px;
+}
+a {
+    color:#000;
+    text-decoration:none;
+}
+a:visited{
+    color:#000;
+}
+hr{
+    visibility:hidden;
+    clear:both;
+    border-width:0px;
+    border: none;
+    height:0px;
+    margin:0px;
+    padding:0px;
+}
+.center{
+    margin:0 auto;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+
+
+/* __________________________________________________________________Structure*/
+header{
+    height:178px;
+    background:#C4DB17 url('../images/bandeau_v6.jpg') no-repeat  center 17px;
+}
+nav{
+    padding:0px;
+    height:33px;
+    margin:0px;
+    background:#9fd7e2 url('../images/navv6.jpg') repeat-x  top center;
+}
+section.article{
+    /*height:600px;*/
+    background:url("../images/fond_accueil_haut_v6.jpg") no-repeat scroll center -4px  #9fd7e2;
+
+}
+section.article{
+    min-height:600px;
+}
+section.accueil{
+    /*min-height:600px;*/
+    background-color:#9fd7e2;
+    /*background:url("../images/fond_accueil_haut_v6.jpg") no-repeat scroll center top   #9fd7e2;*/*/
+}
+footer.main{
+    height:150px;
+    background:#333 url('../images/bandeau_basv3.jpg') repeat-x  center top;
+    color:#fff;
+    padding-top:50px;
+}
+
+
+/* __________________________________________________________________Header */
+header.main div, header.main h1{
+    background-color: #333333;
+    font-family: sans-serif;
+    font-weight:normal;
+    margin:0;
+    padding:0;
+}
+header.main div{
+    height:18px;
+    font-size: 0.7em;
+    line-height: 17px;
+}
+header.main h1{
+    float:left;
+    padding-left:7px;
+    font-size: 1em;
+}
+
+header.main a{
+    color:#999 !important;
+    border:none;
+}
+header.main img{
+    border: none;
+}
+#lien_top {
+    display:block;
+    float:right;
+    margin-right:7px;
+    width:120px;
+	text-align:right;
+}
+#lien_top .facebook{
+    font-family:sans-serif;
+    font-size: 1em;
+    display:block;
+    height:16px;
+    padding-right:20px;
+    background:transparent url('../images/facebook.gif') no-repeat bottom right;
+}
+.header_info{
+    height:273px;
+    width:306px;
+}
+#dates{
+    background:url("../images/du_28_juillet_au_7_aout_2011_v2.jpg") no-repeat scroll center 143px #BFC14D;
+}
+#edition{
+    background:url("../images/19eme_festival_de_musique_de_chambre_v2.jpg") no-repeat scroll center 143px #BDD6D6;
+}
+
+/* __________________________________________________________________Les menu */
+nav a{
+    color:#000;
+    text-decoration:none;
+}
+nav a:hover{
+    color:#f00;
+}
+#menu{
+    font-size:16px;
+    padding:0px;
+    margin:0px;
+    margin-top:13px;
+    height:20px;
+	text-transform:uppercase;
+}
+#menu,#sub_menu{
+    float:left;
+}
+
+#udm,#long_menu{
+    display: block;
+    width:50%;
+}
+#context {
+    
+    float: left;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-left: 19px;
+    padding-top: 12px;
+    position: absolute;}
+#context *{
+    display:none;
+}
+#context .ancestor ,#context .selected ,#context .ancestor a,#context .selected a{
+    display:block;
+    color: #84B3BD !important;
+}
+#sub_menu{
+   border-bottom: 1px solid #84B3BD;
+    clear: both;
+    /*height: 47px;*/
+    margin-left: 15px;
+    margin-top: 28px;
+    position: absolute;
+    width: 270px;
+    z-index: 1000;
+}
+#udm  li{
+    width:106px;
+}
+#udm  li a{
+    display:block;
+    /*width:106px;*/
+    text-align:center !important;
+}
+.udm ul a, .udm ul a:link, .udm ul a.nohref{
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+.udm ul li a:visited, * html .udm ul li a:visited{
+    border:none;
+}
+#sub_menu li{
+    display: block;
+    float:left;
+    width:130px;
+    /*font-family: sans-serif;*/
+    font-size: 0.9em;
+    list-style: none outside none;
+    text-transform:uppercase;
+}
+#sub_menu li a{
+    display:block;
+    padding-left:5px;
+}
+#sub_menu li a:hover{
+    background-color:#FFD00A;
+}
+#sub_menu li.selected a{
+        color: #060709;
+    font-weight: bold;
+}
+/* __________________________________________________________________Footer */
+footer.main article{
+    padding:5px 10px;
+}
+footer.main  a{
+    color:#fff !important;
+	display:block;
+	float:left;
+	clear:both;
+}
+
+/* __________________________________________________________________Page accueil */
+#tourniquet, .block_info{
+    background-color:#666;
+    margin-bottom:14px;
+    overflow:hidden;
+}
+#tourniquet h2,#tourniquet h3,#tourniquet h4{
+    margin:0px;
+}
+#tourniquet{
+    height:334px;
+    /*margin-top:16px;*/
+    position:relative;
+}
+#tourniquet .panel-wrapper div.center{
+    padding:20px 40px;
+}
+#tourniquet .panel-wrapper div.center p img{
+    margin: -34px 10px 0 -40px;}
+#tourniquet .panel-wrapper div.center img{
+    margin: -20px 10px 0 -40px;
+    float:left;
+    padding-bottom:100px;
+    /*border-right: 5px solid #9fd7e2;*/
+    background-color:#333;}
+#tourniquet .coda-slider img {
+    width: 352px;
+}
+
+#tourniquet h2{
+    color: #913800;
+    height: 50px;
+    margin: 0 -40px 60px 0;
+    padding: 0 40px 17px;
+    text-shadow: 1px 1px 2px #999999;
+}
+#tourniquet h3{
+    font-size:20px;
+    line-height:23px;
+}
+#tourniquet h4{
+    font-size:17px;
+}
+#tourniquet p{
+    font-size:15px;
+    line-height:21px;
+    margin-bottom:1em;
+}
+
+.panel{
+    background:url("../images/cielbleu_v4.jpg") no-repeat scroll right 84px #FFFFFF !important;
+}
+.block_info {
+    padding-top:5px;
+    padding-bottom:7px;
+    min-height:200px;
+    background:transparent;
+    }
+.block_info h2{
+    background:transparent url('../images/soulignement_B.jpg') no-repeat  right top;
+	height:2em;
+}
+#info2 h2{
+    background-image: url('../images/soulignement_A.jpg');   
+}
+#info3 h2{
+    background-image: url('../images/soulignement_C.jpg');   
+}
+.block_info h2{
+    font-size:1.5em;
+}
+.block_info h2,.block_info h3, .block_info p, .block_info img{
+    margin-left:7px;
+    margin-right:7px;
+    text-align:right;
+    padding-right:5px;
+}
+/* __________________________________________________________________Info du jours */
+#info_du_jour{
+    background: none repeat scroll 0 0 transparent;
+    clear: both;
+    color: #041356;
+    height: 85px;
+    margin: 0 0 0 354px;
+    position: absolute;
+    width: 240px;
+    z-index: 3000;
+    height: 85px;
+    margin: 0 0 0 354px;
+    position: absolute;
+    width: 240px;
+    z-index:3000;
+    clear:both;
+}
+#info_du_jour p{
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin: 5px 0 0;
+    padding: 0 10px 0 10px;
+	text-align:justify;
+	height:4em;
+	overflow:hidden;
+}
+#info_du_jour a{
+	text-align:right;
+	display:block;
+    padding: 0 10px 0 10px;
+}
+#info_du_jour a:hover{
+	color:#fff;
+	font-weight:bold;
+}
+/* __________________________________________________________________Les articles */
+h2{
+    margin-top:0em;
+    font-size: 1.8em;
+    line-height: 1em;
+    text-align: right;
+}
+section.article article {
+    margin-top:30px;
+}
+.article h2{
+    height: 73px;
+    margin: 0px -5px 3px;
+    padding-bottom:21px;
+    padding-left: 585px;
+    padding-right:30px;
+    background:url("../images/soulignement_D.jpg") no-repeat scroll right bottom transparent;
+}
+.article_texte p,.article_texte h3,.article_texte img{
+    margin-left:30px;
+    margin-right:30px;
+}
+
+
+
+/* __________________________________________________________________Les Listes*/
+/* simple definition liste pour les menbre d'un bureau par ex*/
+dl{
+    background-color: #999999;
+    display: block;
+    margin:0 auto;
+    padding: 10px 10px 5px 10px;
+    width: 240px;
+}
+dt{
+    font-weight: bold;
+    width: 240px;
+}
+dd{
+    margin-bottom: 10px;
+    width: 200px;
+}
+/* Liste de nom ou d'info  ( v1 : pour le comité d'honneur ( <p>Nom<em>Titre</em></p>*/
+.article_partenaires a{
+   display: block;
+    float: left;
+    height: 100px;
+    margin: 0 0 10px;
+    text-align: center;
+    vertical-align: inherit;
+    width: 300px;
+   
+}
+.article_partenaires img{
+    max-width:100px;
+    max-height:100px;
+}
+/* Liste de nom ou d'info  ( v1 : pour le comité d'honneur ( <p>Nom<em>Titre</em></p>*/
+.article_liste p{
+    font-weight:bold;
+    text-align:center;
+}
+.article_liste p em{
+    clear:both;
+    display:block;
+    font-weight:normal;
+}
+
+/* Fiches info ( v1 : pour la revue de presse ( <p>article<em>source</em></p>*/
+.article_fiche img.right{
+    margin-left:5px;
+}
+.article_fiche img.left{
+    margin-right:5px;
+}
+.article_fiche p, .article_fiche h3{
+    border: 1px solid #FFFFFF;
+    display: block;
+    float: left;
+    height: 211px;
+    margin-left: 9px;
+    overflow: hidden;
+    padding: 6px;   
+    position: relative;
+    text-align: left;
+    width: 211px;
+    margin-top:0px;
+    margin-bottom:10px;
+}
+.article_fiche h3{
+    line-height:50px;
+    text-align:center;
+    font-size:2em;
+}
+.article_fiche img{
+    margin:-6px 0 0 -6px;
+    min-width:225px;
+    min-height:225px;
+    
+}
+.article_fiche p em{
+    background-color: #999999;
+    bottom: 0;
+    left:0;
+    display: block;
+    font-weight: normal;
+    position: absolute;
+    text-align: right;
+    width: 217px;
+    padding-right:6px;
+}
+/* __________________________________________________________________Ajax : Artistes_all*/
+#artistes_all{
+    text-align:justify;
+    clear:both;
+}
+div.artiste {
+    background: none repeat scroll 0 0 #A8E4F0;
+    -moz-box-shadow: 8px 8px 4px #888888;
+    -webkit-box-shadow: 8px 8px 4px #888888;
+    box-shadow: 8px 8px 4px #888888;
+    float: left;
+    height: 300px;
+    margin-bottom: 14px;
+    margin-left: 7px;
+    margin-right: 7px;
+    overflow: hidden;
+    padding: 0 13px 0 8px;
+    width: 196px;
+}
+div.artiste div.bio{
+
+}
+div.artiste h3 {
+    margin-left:5px;
+}
+div.artiste h3 span.instrument{
+    /*float:right;*/
+    width:80%;
+    display:block;
+    font-weight:normal;
+    margin-top:5px;
+    font-variant:small-caps;
+    /*text-align:right;*/
+}
+div.artiste img {
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 27px;
+    margin-top: 10px;
+    max-width: 146px;
+}
+
+.bio h3{
+    text-align:left;
+}
+.bio h3 span.instrument{
+    float:right;
+    display:block;
+    font-weight:normal;
+    margin-top:5px;
+    font-variant:small-caps;
+}
+.bio img{
+    float:left;
+    margin:5px 15px 15px 0px;
+}
+.bio p{
+    text-align:justify;
+}
+.bio br {
+    margin-bottom: 10px;
+}
+.lien_bio{
+    background-color: #E49804;
+    margin-left: 138px;
+    margin-top: 273px;
+    padding: 2px 5px;
+    position: absolute;
+      cursor : pointer;
+
+}
+.ui-dialog{
+    background-image:none !important;
+        background-color:#ffffff ;}
+.ui-dialog-content{
+    overflow:scroll;
+    padding-right: 10px;
+    background-image:none !important;
+    background-color:#ffffff ;
+     font-size: 11px;
+}
+.ui-dialog .ui-resizable-handle{
+    background:none !important;
+    display:none !important;
+}
+.ui-dialog .ui-dialog-titlebar, .ui-dialog .ui-dialog-titlebar{
+    background: none #BDD600 !important;
+}
+/* __________________________________________________________________ Programme detail*/
+
+#programme_detail .concert {
+    background-color: #333;
+    margin-bottom:7px;
+    background:url("../images/soulignement_C.jpg") no-repeat scroll 2px 7px transparent;
+     -moz-box-shadow: 0px 4px 4px #888888;
+    -webkit-box-shadow: 0px 4px 4px #888888;
+    box-shadow: 0px 4px 4px #888888;
+    padding:12px 0px 29px 0px;
+    
+}
+#programme_detail .concert_info{
+    float:left;
+    width: 30%;
+    padding: 0px 5px 0px 5px;
+}
+#programme_detail .concert_date {
+    font-size: 1.5em;
+    margin:0px 0px 14px;
+    font-weight:bold;
+}
+#programme_detail .concert_date span{
+   font-weight:normal;
+   font-size:0.8em;
+}
+#programme_detail .concert_artists {
+    float: left;
+  
+}
+#programme_detail .concert_artists li {
+    list-style: none;
+}
+#programme_detail .concert_artists li span {
+    font-style: italic;
+}
+#programme_detail .concert_works {
+    width: 63%;
+    float: left;
+    padding-left:18px;
+    margin-top:27px;
+}
+#programme_detail .concert_works h3,.concert_works p {
+    margin: 0px;
+}
+#programme_detail .concert_works p {
+    margin: 5px 0px 4px 0px;
+}
+
+
+#programme_court .concert *{
+    text-align:left !important;
+}
+#programme_court .concert p ,#programme_court .concert h4{
+    padding-left:22px;
+    padding-right:27px;
+}
+#programme_court .concert p{
+    margin:0px;
+    
+}
+#programme_court .concert p.concert_date {
+    font-size:1.3em;
+    font-weight:bold;
+}
+#programme_court .concert h4{
+    margin-bottom:2px;
+}
+#info3 h2{
+    padding-left:16px;
+    text-align:left;
+}
+#info3 a {
+    text-align:left;
+    display: block;
+    margin-top: 17px;
+    padding-left:22px;
+    font-weight: bold;
+    color: #fff;
+}

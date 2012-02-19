@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load cache menu_tags %}
+{% block menu %}
+		<div id="menu" class="container_9">
+			<ul id="udm" class="udm">
+				{% show_menu 0 100 100 100 %}
+			</ul>	
+		</div>
+		{% endblock %}
+{% block template_media %}
+<link rel="stylesheet" href="/static/css/coda-slider-2.0.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
+{% endblock %}
+
+{% block section %}
+	<section class="accueil container_9">
+				<article id="tourniquet" class="container_9">
+					<div class="coda-slider-wrapper">
+					        <div class="coda-slider " id="carousel-1">
+							{% placeholder "carousel" %}
+						</div>
+					</div>
+				</article>
+				<article id="info1" class="block_info grid_2">
+					{% placeholder "info1" %}
+				</article>
+				<article id="info2" class="block_info grid_4">
+					{% placeholder "info2" %}
+				</article>
+				<article id="info3" class="block_info grid_3">
+					{% placeholder "info3" %}
+				</article>
+				<hr/>
+	</section>
+	<script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.coda-slider-2.0.js"></script>
+	<script type="text/javascript">
+                        $().ready(function() {
+                                $('#carousel-1').codaSlider({
+			           autoSlide: true,
+			           autoSlideInterval: 8000,
+			           autoSlideStopWhenClicked: true,
+					   autoHeight: false,
+					   dynamicArrowLeftText: "&#171;",
+					   dynamicArrowRightText: "&#187;",
+						dynamicTabs: false
+					   
+			       });	
+                    });
+                 </script>
+{% endblock %}
+

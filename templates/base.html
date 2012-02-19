@@ -1,0 +1,138 @@
+{% load cms_tags %}
+{% load cache menu_tags %}
+{% load sekizai_tags %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+	<title>Musique à l'Emperi 2011 - Du 28 juillet au 7 août 2011</title>
+	{% plugins_media %}       
+    	<!-- ULTIMATE DROP DOWN MENU Version 4.52 by Brothercake -->
+	<!-- http://www.udm4.com/ -->
+	<script type="text/javascript" src="/static/js/udm-custom.js"></script>
+	<script type="text/javascript" src="/static/js/udm-control.js"></script>
+	<script type="text/javascript" src="/static/js/udm-style.js"></script>
+	
+	<link rel="stylesheet" href="/static/css/emperi.css" type="text/css" media="screen" />
+	
+	<!--[if IE 7]>	
+		<link rel="stylesheet" href="/static/css/emperi_ie67.css" type="text/css" media="screen" />
+	<![endif]-->
+	<!--[if IE 6]>
+		<link rel="stylesheet" href="/static/css/emperi_ie67.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/static/css/emperi_ie6.css" type="text/css" media="screen" />
+	<![endif]-->
+	
+	<!--élements html 5-->
+	<!--[if IE]>
+		<script type="text/javascript">
+				document.createElement("header"); 
+				document.createElement("footer"); 
+				document.createElement("section"); 
+				document.createElement("aside"); 
+				document.createElement("nav"); 
+				document.createElement("article"); 
+				document.createElement("figure");</script>
+	<![endif] -->
+	{% render_block "css" %} <!-- sekizai tag to add css from plugins in correct place -->	
+	{% block template_media %}{% endblock %}
+</head>
+<body >
+
+<script type="text/javascript" src="/static/js/udm-dom.js" defer="defer" ></script>
+
+	<header role="banner" class="main container_9">
+		<div class="container_9">
+					<h1  ><a href="/" >Musique à L'Emperi - Salon-de-provence</a></h1>
+					<span id="lien_top"><a href="http://www.facebook.com/group.php?gid=68106348661" class="facebook">Suivez le festival</a></span>
+		</div>
+		<a href="/" ><img src="/static/images/bandeau_v6.jpg" /></a>
+    </header>
+	
+	<nav class=" container_9">
+		{% block menu %}
+		<div id="menu" class="container_9">
+			<ul id="udm" class="udm">
+				{% show_menu 0 100 100 100 %}
+			</ul>	
+		</div>
+		{% endblock %}
+
+		<hr/>
+	</nav>
+			<!--<ul id="udm" class="udm">
+			{% for menu_item in menu_items %}
+			<li>
+			<a href="/{{lang_code}}/{{menu_item.url}}">{{menu_item.name}}</a>    
+				{% if menu_item.children %}
+			<ul>
+				{% for child_menu_item in menu_item.children %}
+				<li>
+					<a style="white-space:nowrap" href="/{{lang_code}}/{{menu_item.url}}/{{child_menu_item.url}}">{{child_menu_item.name}}</a>
+				</li>        
+				{% endfor %}
+			</ul>			
+			{% endif %}
+			</li>
+			{% endfor %}
+		</ul>-->
+	{% block section %}
+			<section class="article container_9">
+				{% block submenu %}
+					<div id="context" >{% show_menu 0 0 0 0  %} </div>
+				<!--<div id="sub_menu" >
+					<ul>
+						{% show_menu 1 100 0 100 %}
+					</ul>
+				</div>-->
+				<div class="EI_hack">
+				</div>
+			{% endblock %}
+			<header id="info_du_jour">
+				<div class="header_content" >
+					{% block header1 %}
+						{% show_uncached_placeholder "header_info" "999" %}
+					{% endblock %}
+				</div>
+				</header>
+			{% block content %}
+				
+			{% endblock %}
+			<hr/>
+		</section>
+	{% endblock %}
+	
+	
+	<footer class="main container_9">
+		<article class="grid_2 push_1 lien_footer">
+			{% block footer1 %}
+				{% show_placeholder "footer1" "999" %}
+			{% endblock %}
+		</article>
+		<article class="grid_2 push_1 lien_footer">
+			{% block footer2 %}
+				{% show_placeholder "footer2" "999" %}
+			{% endblock %}
+		</article>
+		<article class="grid_2 push_1 lien_footer">
+			{% block footer3 %}
+				{% show_placeholder "footer3" "999" %}
+			{% endblock %}
+		</article>
+	</footer>
+
+
+<!--fin nouveau template-->
+ 
+<!--<script type="text/javascript">-->
+<!--var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");-->
+<!--document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));-->
+<!--</script>-->
+<!--<script type="text/javascript">-->
+<!--try {-->
+<!--var pageTracker = _gat._getTracker("UA-834191-9");-->
+<!--pageTracker._trackPageview();-->
+<!--} catch(err) {}</script>-->
+</body>
+</html>

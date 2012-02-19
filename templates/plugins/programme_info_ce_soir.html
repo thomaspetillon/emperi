@@ -1,0 +1,17 @@
+{% load sekizai_tags %}
+{% load xmlplugin_tags %}
+    {% with datas|random as concert %}
+        {% with concert.works|random as work %}
+        <p>
+            <strong>{{ concert.date|datestr_format:"%Y-%m-%d||%A %d %B"|capfirst }}</strong><br>
+            {% if work|length > 48 %}
+                {{work.title|slice:":48"}}[...]
+            {% else %}
+                {{work.title}}
+            {% endif %}
+            <span style=" font-style: italic;">
+            {{work.composer_first_name|inital_letter|safe}}{{work.composer_last_name|upper}}
+            </span>
+        </p>
+        {% endwith %}
+{% endwith %}    

@@ -1,0 +1,7 @@
+/*IE 6 hack*/
+section{
+    margin-top:-20px;
+}
+.article_fiche p, .article_fiche h3{
+    width: 199px;
+}
